@@ -46,19 +46,20 @@ public class U1L05HotelCost {
 			fourSeasonsOrig *= numNights;
 		}
 		JOptionPane.showMessageDialog(null, "Four Seasons: "+ stars4);
-		hotel = JOptionPane.showInputDialog("Where do you want to stay? (Write with capital first letter)");
-		if (hotel == "Marriott") {
-			JOptionPane.showMessageDialog(null, "A "+nightsNum+" night stay at "+hotel+" is "+ marriottOrig);
+		hotel = JOptionPane.showInputDialog("Where do you want to stay?");
+		hotel.toLowerCase();
+		if (hotel.equals("Marriott")) {
+			JOptionPane.showMessageDialog(null, "A "+nightsNum+" night stay at "+hotel+" is $"+ marriottOrig);
 		}
-		if (hotel == "Hilton") {
-			JOptionPane.showMessageDialog(null, "A "+nightsNum+" night stay at "+hotel+" is "+ hiltonOrig);
+		if (hotel.equals("Hilton")) {
+			JOptionPane.showMessageDialog(null, "A "+nightsNum+" night stay at "+hotel+" is $"+ hiltonOrig);
 			
 		}
-		if (hotel == "Hyatt") {
-			JOptionPane.showMessageDialog(null, "A "+nightsNum+" night stay at "+hotel+" is "+ hyattOrig);	
+		if (hotel.equals("Hyatt")) {
+			JOptionPane.showMessageDialog(null, "A "+nightsNum+" night stay at "+hotel+" is $"+ hyattOrig);	
 		}
-		if (hotel == "Four Seasons") {
-			JOptionPane.showMessageDialog(null, "A "+nightsNum+" night stay at "+hotel+" is "+ fourSeasonsOrig);	
+		if (hotel.equals("Four Seasons")) {
+			JOptionPane.showMessageDialog(null, "A "+nightsNum+" night stay at "+hotel+" is $"+ fourSeasonsOrig);	
 		}
 
 	}
